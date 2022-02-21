@@ -31,6 +31,10 @@ nav h1 {
   background-color: aliceblue;
 }
 
+.navbar-toggler-icon {
+  color: black;
+}
+
 .nav-search {
   background-color: lightgray;
 }
