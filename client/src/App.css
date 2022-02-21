@@ -1,4 +1,37 @@
+.font-link {
+  font-family: 'PT Serif', serif;
+}
+
+:root {
+  --primary-color: bisque;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .App {
   text-align: center;
+}
+
+nav {
+  background-color: var(--primary-color);
+  padding: 15px;
+  border-bottom: 3px black solid;
+}
+
+nav h1 {
+  padding-left: 350px;
+  margin-top: 10px;
+}
+
+.navbar-toggler {
+  background-color: aliceblue;
+}
+
+.nav-search {
+  background-color: lightgray;
 }
 
