@@ -12,30 +12,65 @@
   box-sizing: border-box;
 }
 
+body {
+  background-color: aliceblue;
+}
+
 .App {
   text-align: center;
 }
 
-nav {
+.nav-login {
   background-color: var(--primary-color);
   padding: 15px;
-  border-bottom: 3px black solid;
+  border-bottom: 1px black solid;
+  justify-content: space-between;
 }
 
-nav h1 {
-  padding-left: 350px;
+.nav-login h1 {
   margin-top: 10px;
 }
 
-.navbar-toggler {
-  background-color: aliceblue;
-}
-
-.navbar-toggler-icon {
+.link {
   color: black;
 }
 
 .nav-search {
-  background-color: lightgray;
+  padding: 15px;
+  background-color: rgb(150, 185, 199);
+  border-bottom: 1px black solid;
 }
+
+.nav-bar-btn {
+  border: black 1px solid;
+}
+
+h5 {
+  font-size: 1.25rem;
+  font-weight: bolder;
+  color: black;
+}
+
+.dropdown-menu {
+    top: 100%;
+    left: 0;
+    z-index: 1000;
+    display: none;
+    float: left;
+    min-width: 160px;
+    padding: 5px 0;
+    margin: 2px 0 0 2px;
+    font-size: 14px;
+    align-items: center;
+    list-style: none;
+    background-color: #fff;
+    -webkit-background-clip: padding-box;
+    background-clip: padding-box;
+    border: 1px solid rgb(0, 0, 0);
+    border: 1px solid rgb(0, 0, 0);
+    border-radius: 4px;
+    -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+    box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
 
