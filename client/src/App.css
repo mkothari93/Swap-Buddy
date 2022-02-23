@@ -51,6 +51,28 @@ h5 {
   color: black;
 }
 
+.dropdown-login {
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: right;
+  min-width: 160px;
+  padding: 5px 0;
+  margin: 2px 0 0 2px;
+  font-size: 14px;
+  align-items: center;
+  list-style: none;
+  background-color: #fff;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  border: 1px solid rgb(0, 0, 0);
+  border: 1px solid rgb(0, 0, 0);
+  border-radius: 4px;
+  -webkit-box-shadow: 0 6px 12px rgba(0,0,0,.175);
+  box-shadow: 0 6px 12px rgba(0,0,0,.175);
+}
+
 .dropdown-menu {
     top: 100%;
     left: 0;
@@ -73,4 +95,11 @@ h5 {
     box-shadow: 0 6px 12px rgba(0,0,0,.175);
 }
 
-
+#card {
+  /* margin-left: auto; */
+  margin-right: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
