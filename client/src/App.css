@@ -44,6 +44,9 @@ body {
 .nav-bar-btn {
   border: black 1px solid;
 }
+#categorynav{
+  margin-top: 56px;
+}
 
 h5 {
   font-size: 1.25rem;
@@ -96,10 +99,30 @@ h5 {
 }
 
 #card {
-  /* margin-left: auto; */
-  margin-right: auto;
-  padding: 10px;
+  padding: auto;
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+}
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #09d3ac;
 }
