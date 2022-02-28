@@ -1,5 +1,5 @@
 .font-link {
-  font-family: 'PT Serif', serif;
+  font-family: Verdana, sans-serif;
 }
 
 :root {
@@ -43,6 +43,7 @@ body {
 
 .nav-bar-btn {
   border: black 1px solid;
+  margin-top: 15px;
 }
 #categorynav{
   margin-top: 56px;
@@ -123,6 +124,3 @@ h5 {
   color: white;
 }
 
-.App-link {
-  color: #09d3ac;
-}

@@ -11,9 +11,9 @@ export default class Home extends Component {
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>book</Card.Title>
+    <Card.Title>Book</Card.Title>
     <Card.Text>
-     Harry Potter series 
+     Harry Potter Series 
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
@@ -27,13 +27,13 @@ export default class Home extends Component {
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>funiture</Card.Title>
+    <Card.Title>Funiture</Card.Title>
     <Card.Text>
-Wooden Porch swing
+Wooden Porch Swing
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>fair condition</ListGroupItem>
+    <ListGroupItem>Fair Condition</ListGroupItem>
     <ListGroupItem>New York</ListGroupItem>
   </ListGroup>
 </Card>
@@ -44,9 +44,9 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>toys</Card.Title>
+    <Card.Title>Toys</Card.Title>
     <Card.Text>
-      Girls bike
+      Girls Bike
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
@@ -60,13 +60,13 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>Video game</Card.Title>
+    <Card.Title>Video Game</Card.Title>
     <Card.Text>
-     Mario Cart game for the Switch
+     Mario Cart Game for The Switch
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>New condition</ListGroupItem>
+    <ListGroupItem>New Condition</ListGroupItem>
     <ListGroupItem>Hayesville, North Carolina</ListGroupItem>
   </ListGroup>
 </Card>
@@ -76,13 +76,13 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>baby</Card.Title>
+    <Card.Title>Baby</Card.Title>
     <Card.Text>
-      6 month girl baby clothes
+      6 Month Girl Baby Clothes
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>fair condition</ListGroupItem>
+    <ListGroupItem>Fair Condition</ListGroupItem>
     <ListGroupItem>Asheville, North Carolina</ListGroupItem>
   </ListGroup>
 </Card>
@@ -92,13 +92,13 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>toys</Card.Title>
+    <Card.Title>Toys</Card.Title>
     <Card.Text>
-   Apples to Apples card games
+   Apples to Apples Card Games
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>Hardly used</ListGroupItem>
+    <ListGroupItem>Hardly Used</ListGroupItem>
     <ListGroupItem>Charlotte, North Carolina</ListGroupItem>
   </ListGroup>
 </Card>
@@ -111,11 +111,11 @@ Wooden Porch swing
   <Card.Body>
     <Card.Title>Funiture</Card.Title>
     <Card.Text>
-   Grey sectional couch
+   Grey Sectional Couch
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>good condition</ListGroupItem>
+    <ListGroupItem>Good Condition</ListGroupItem>
     <ListGroupItem>Atlanta,Georgia</ListGroupItem>
   </ListGroup>
 </Card>
@@ -127,11 +127,11 @@ Wooden Porch swing
   <Card.Body>
     <Card.Title>Home Decor</Card.Title>
     <Card.Text>
-    Christmas wreath
+    Christmas Wreath
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>new condition </ListGroupItem>
+    <ListGroupItem>New Condition </ListGroupItem>
     <ListGroupItem>Haven, Georgia</ListGroupItem>
   </ListGroup>
 </Card>
