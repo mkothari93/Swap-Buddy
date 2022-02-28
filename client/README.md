@@ -1,70 +1,75 @@
-# Getting Started with Create React App
+# Swap-buddy
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Swap-buudy a full stack web application where a user can created an account, login, and post items to swap with people in the area. 
 
-## Available Scripts
+# Table of contents 
 
-In the project directory, you can run:
+- Swap-buddy
+- Table of contents
+- The project requirements 
+- The development process
+- User Story
+- Installation and Usage
+- Credits
+- Questions
 
-### `npm start`
+# The project requirements 
+Your project should fulfill the following requirements:
+Use React for the front end.
+Use GraphQL with a Node.js and Express.js server.
+Use MongoDB and the Mongoose ODM for the database.
+Use queries and mutations for retrieving, adding, updating, and deleting data.
+Be deployed using Heroku (with data).
+Have a polished UI.
+Be responsive.
+Be interactive (i.e., accept and respond to user input).
+Include authentication (JWT).
+Protect sensitive API key information on the server.
+Have a clean repository that meets quality coding standards (file structure, naming conventions, best practices for class and id naming conventions, indentation, high-quality comments, etc.).
+Have a high-quality README (with unique name, description, technologies used, screenshot, and link to deployed application).
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+# The development process
+1. Brainstorm Ideas and defined our projects main purpose and user
+2. WireFrame
+3. Disscussed steps and assigned them between meetings
+4.Set up the backend
+5. Connected front and backend
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+# User Story
 
-### `npm test`
+As a user I want... 
+An application to be used to connect with people in the area to swap items. 
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+# Installation and Usage
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+(screen shots/ video goes here)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The project was uploaded to GitHub at the following repository:
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+You can access the deployed application with the Heroku link:
 
-### `npm run eject`
+To install the project follow these steps:
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Clone the application from GitHub with:
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+git clone [clone link from GitHub]
+From the root folder, install the dependencies with:
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+npm i
+Run the app with:
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+node server.js
 
-## Learn More
+# Credits
+Kate hamilton
+Monika Kothari 
+Connor Van Brocklin
+Hares N.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+# Questions 
+If you have questions or you want to share comments, we will be glad to hear from you. Please contact us at
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+rr
+vvv
