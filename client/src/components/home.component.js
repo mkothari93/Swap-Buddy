@@ -66,7 +66,7 @@ Wooden Porch swing
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>2 months old</ListGroupItem>
+    <ListGroupItem>New condition</ListGroupItem>
     <ListGroupItem>Hayesville, North Carolina</ListGroupItem>
   </ListGroup>
 </Card>
@@ -76,21 +76,15 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>baby</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+      6 month girl baby clothes
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>Cras justo odio</ListGroupItem>
-    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+    <ListGroupItem>fair condition</ListGroupItem>
+    <ListGroupItem>Asheville, North Carolina</ListGroupItem>
   </ListGroup>
-  <Card.Body>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
 </Card>
 </div>
 {/* card 6 */}
@@ -98,21 +92,15 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>toys</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+   Apples to Apples card games
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>Cras justo odio</ListGroupItem>
-    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+    <ListGroupItem>Hardly used</ListGroupItem>
+    <ListGroupItem>Charlotte, North Carolina</ListGroupItem>
   </ListGroup>
-  <Card.Body>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
 </Card>
 </div>
 
@@ -121,21 +109,15 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Funiture</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+   Grey sectional couch
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>Cras justo odio</ListGroupItem>
-    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+    <ListGroupItem>good condition</ListGroupItem>
+    <ListGroupItem>Atlanta,Georgia</ListGroupItem>
   </ListGroup>
-  <Card.Body>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
 </Card>
 </div>
 {/* card 8 */}
@@ -143,21 +125,15 @@ Wooden Porch swing
     <Card style={{ width: '18rem' }}>
   <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
   <Card.Body>
-    <Card.Title>Card Title</Card.Title>
+    <Card.Title>Home Decor</Card.Title>
     <Card.Text>
-      Some quick example text to build on the card title and make up the bulk of
-      the card's content.
+    Christmas wreath
     </Card.Text>
   </Card.Body>
   <ListGroup className="list-group-flush">
-    <ListGroupItem>Cras justo odio</ListGroupItem>
-    <ListGroupItem>Dapibus ac facilisis in</ListGroupItem>
-    <ListGroupItem>Vestibulum at eros</ListGroupItem>
+    <ListGroupItem>new condition </ListGroupItem>
+    <ListGroupItem>Haven, Georgia</ListGroupItem>
   </ListGroup>
-  <Card.Body>
-    <Card.Link href="#">Card Link</Card.Link>
-    <Card.Link href="#">Another Link</Card.Link>
-  </Card.Body>
 </Card>
 </div>
 </div>
