@@ -16,16 +16,19 @@ const resolvers = {
   
         throw new AuthenticationError('Not logged in');
       },
+
       getUsers: async () => {
         return User.find()
           .select('-__v -password')
           .populate('posts')
       },
+
       getAllPosts: async () => {
         return Post.find()
           .select('-__v')
           .populate('username')
       },
+
       getUser: async (parent, { username }) => {
         return User.findOne({ username })
           .select('-__v -password')
@@ -47,6 +50,7 @@ Mutation: {
 
       return { token, user };
     },
+
     login: async (parent, { email, password }) => {
       const user = await User.findOne({ email });
 
@@ -80,6 +84,21 @@ Mutation: {
       throw new AuthenticationError('You need to be logged in!');
     },
 
+    createMessage: async (parent, args, context) => {
+        if (context.user) {
+          const message = await Message.create({ ...args, username: context.user.username });
+  
+          await User.findByIdAndUpdate(
+            { _id: context.user._id },
+            { $push: { messages: message._id } },
+            { new: true }
+          );
+  
+          return message;
+        }
+  
+        throw new AuthenticationError('You need to be logged in!');
+    }
     // addReaction: async (parent, { thoughtId, reactionBody }, context) => {
     //   if (context.user) {
     //     const updatedThought = await Thought.findOneAndUpdate(

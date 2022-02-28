@@ -1,6 +1,6 @@
 const jwt = require('jsonwebtoken');
 
-const secret = 'mysecretsshhhhh';
+const secret = 'swapbuddysecret';
 const expiration = '2h';
 
 module.exports = {
@@ -29,6 +29,7 @@ module.exports = {
 
     return req;
   },
+
   signToken: function({ username, email, _id }) {
     const payload = { username, email, _id };
 

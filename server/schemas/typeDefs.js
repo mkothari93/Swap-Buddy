@@ -40,14 +40,15 @@ const typeDefs = gql`
   type Query {
     me: User
     getUsers: [User]
-    getAllPosts: [Post]
     getUser(username: String!): User
+    getAllPosts: [Post]
   }
 
   type Mutation {
     login(email: String!, password: String!): Auth
     addUser(username: String!, email: String!, password: String!): Auth
     createPost(postTitle: String!, postText: String!): Post
+    createMessage(messageTitle: String!, messageBody: String!): Message
   }
 `;
 
