@@ -1,10 +1,10 @@
 const mongoose = require('mongoose');
 
 mongoose.connect(
-  process.env.MONGODB_URI || 'mongodb://localhost:27017/deep-thoughts',
+  process.env.MONGODB_URI || 'mongodb://localhost:27017/swap-buddy',
   {
     useNewUrlParser: true, 
-    useUnifiedTopology: true,
+    useUnifiedTopology: true
   }
 );
 

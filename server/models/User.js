@@ -19,9 +19,23 @@ const userSchema = new Schema(
       type: String,
       required: true,
       minlength: 8
-    }
+    },
+    posts: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Post",
+      },
+    ],
+    messages: [
+      {
+        type: Schema.Types.ObjectId,
+        ref: "Message",
+      },
+    ],
   }
 );
+
+//RATING FOR USERS
 
 // set up pre-save middleware to create password
 userSchema.pre('save', async function(next) {
