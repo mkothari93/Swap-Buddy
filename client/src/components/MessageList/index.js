@@ -29,7 +29,7 @@ const PostList = ({ posts, title }) => {
                 <ListGroupItem>
                   {post.username} posted on {post.createdAt}
                 </ListGroupItem>
-                <ListGroupItem>{post.postLocation}</ListGroupItem>
+                <ListGroupItem>{post.location}</ListGroupItem>
               </ListGroup>
               <Card.Body>
                 <Card.Link href="#">View Details</Card.Link>
