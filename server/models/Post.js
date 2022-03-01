@@ -17,6 +17,9 @@ const postSchema = new Schema(
     postImage: {
       type: String
     },
+    postLocation: {
+      type: String
+    },
     createdAt: {
       type: Date,
       default: Date.now,

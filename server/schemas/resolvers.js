@@ -23,10 +23,14 @@ const resolvers = {
           .populate('posts')
       },
 
-      getAllPosts: async () => {
-        return Post.find()
+      getAllPosts: async (parent, {username}) => {
+        const params = username ? { username } : {};
+        return Post.find(params)
           .select('-__v')
+          .populate('postTitle')
           .populate('username')
+          .populate('postLocation')
+          .sort({ createdAt: -1 })
       },
 
       getUser: async (parent, { username }) => {
