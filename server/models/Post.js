@@ -6,16 +6,17 @@ const postSchema = new Schema(
     postTitle: {
       type: String,
       required: true,
-      unique: true,
       trim: true,
     },
     postText: {
       type: String,
       required: true,
-      unique: true,
-      match: [/.+@.+\..+/, "Must match an email address!"],
+      trim: true,
     },
     postImage: {
+      type: String
+    },
+    postLocation: {
       type: String
     },
     createdAt: {

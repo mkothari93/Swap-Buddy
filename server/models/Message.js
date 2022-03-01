@@ -7,14 +7,12 @@ const messageSchema = new Schema(
       type: String,
       maxlength: 50,
       required: true,
-      unique: true,
       trim: true,
     },
     messageBody: {
       type: String,
       required: true,
-      unique: true,
-      match: [/.+@.+\..+/, "Must match an email address!"],
+      trim: true,
     },
     createdAt: {
       type: Date,

@@ -1,72 +1,71 @@
 import React from "react";
 import "./App.css";
+import "./Home.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import { Nav, Navbar, NavDropdown, Card, ListGroup, ListGroupItem } from "react-bootstrap";
+import {
+  Nav,
+  Navbar,
+  NavDropdown,
+  Card,
+  ListGroup,
+  ListGroupItem,
+} from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
-import Home from "./components/home.component";
-import Login from "./components/login.component";
-import SignUp from "./components/signup.component";
+import {
+  ApolloProvider,
+  ApolloClient,
+  InMemoryCache,
+  createHttpLink,
+} from "@apollo/client";
+import { setContext } from "@apollo/client/link/context";
+
+import Header from "./components/Header";
+
+import Home from "./pages/Home";
+import WrongRoute from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import UserPage from "./pages/UserPage";
+import SinglePost from "./pages/SinglePost";
+
+const httpLink = createHttpLink({
+  uri: "http://localhost:3001/graphql",
+});
+
+const authLink = setContext((_, { headers }) => {
+  const token = localStorage.getItem("id_token");
+  return {
+    headers: {
+      ...headers,
+      authorization: token ? `Bearer ${token}` : "",
+    },
+  };
+});
+
+const client = new ApolloClient({
+  link: authLink.concat(httpLink),
+  cache: new InMemoryCache(),
+});
 
 function App() {
   return (
-    <Router>
-      <div className="App">
-        <nav className="navbar navbar-expand-lg navbar-light fixed-top">
-          <div className="container">
-            <Link className="navbar-brand" to={"/"}>
-              Swap Buddy
-            </Link>
-            <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-              <ul className="navbar-nav ml-auto">
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-in"}>
-                    Login
-                  </Link>
-                </li>
-                <li className="nav-item">
-                  <Link className="nav-link" to={"/sign-up"}>
-                    Sign up
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          
-        </nav>
-        <nav id="categorynav">
-        <Navbar collapseOnSelect expand="xxxl" className="nav-search" >
-        <Navbar.Toggle aria-controls="basic-navbar-nav" className="nav-bar-btn"> <h5>All Categories</h5> </Navbar.Toggle>
-        <Navbar.Collapse id="basic-navbar-nav">
-          <Nav className="mr-auto dropdown-menu">
-            <Nav.Link href="#messages" className="link">Category</Nav.Link>
-            <Nav.Link href="#login" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-            <Nav.Link href="#signup" className="link">Category</Nav.Link>
-          </Nav>
-        </Navbar.Collapse>
-        <Navbar.Brand href="#home" >
-        
-        </Navbar.Brand>
-      </Navbar>
-      </nav>
+    <ApolloProvider client={client}>
+      <Router>
+        <Header />
         <div className="auth-wrapper">
-          
-            <Switch>
-              <Route exact path="/" component={Home} />
-              <Route path="/sign-in" component={Login} />
-              <Route path="/sign-up" component={SignUp} />
-            </Switch>
-         </div>
-      </div>
-    </Router>
+          <Switch>
+            <Route exact path="/" component={Home} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/signup" component={Signup} />
+            <Route exact path="/userpage/:username?" component={UserPage} />
+            <Route exact path="/post/:id" component={SinglePost} />
 
-
-     );
+            <Route component={WrongRoute} />
+          </Switch>
+        </div>
+      </Router>
+    </ApolloProvider>
+  );
 }
 
 export default App;
