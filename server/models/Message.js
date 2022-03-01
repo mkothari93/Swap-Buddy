@@ -7,7 +7,6 @@ const messageSchema = new Schema(
       type: String,
       maxlength: 50,
       required: true,
-      unique: true,
       trim: true,
     },
     messageBody: {
