@@ -23,6 +23,12 @@ const resolvers = {
           .populate('posts')
       },
 
+      getUser: async (parent, { username }) => {
+        return User.findOne({ username })
+          .select('-__v -password')
+          .populate('posts')
+      },
+
       getAllPosts: async (parent, {username}) => {
         const params = username ? { username } : {};
         return Post.find(params)
@@ -33,11 +39,9 @@ const resolvers = {
           .sort({ createdAt: -1 })
       },
 
-      getUser: async (parent, { username }) => {
-        return User.findOne({ username })
-          .select('-__v -password')
-          .populate('posts')
-      },
+      getPost: async (parent, { _id }) => {
+        return Post.findOne({ _id });
+      }
     //   thoughts: async (parent, { username }) => {
     //     const params = username ? { username } : {};
     //     return Thought.find(params).sort({ createdAt: -1 });

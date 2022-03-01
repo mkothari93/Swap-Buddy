@@ -7,6 +7,7 @@ import {
   ListGroup,
   ListGroupItem,
 } from "react-bootstrap";
+import { Link } from 'react-router-dom';
 
 const PostList = ({ posts, title }) => {
   if (!posts.length) {
@@ -32,7 +33,11 @@ const PostList = ({ posts, title }) => {
                 <ListGroupItem>{post.postLocation}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <Card.Link href="#">View Details</Card.Link>
+                <Card.Link>
+                  <Link to={`/post/${post._id}`}>
+                    View Details
+                  </Link>
+                </Card.Link>
                 <Card.Link href="#">Contact {post.username}</Card.Link>
               </Card.Body>
             </Card>

@@ -18,9 +18,12 @@ import {
   createHttpLink,
 } from "@apollo/client";
 // import Home from "./components/home.component";
-import Home from './pages/Home'
-import Login from "./components/login.component";
-import SignUp from "./components/signup.component";
+import Home from './pages/Home';
+import WrongRoute from "./pages/Home";
+import Login from "./pages/Login";
+import Signup from "./pages/Signup";
+import UserPage from "./pages/UserPage";
+import SinglePost from "./pages/SinglePost";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:3001/graphql",
@@ -106,8 +109,13 @@ function App() {
           <div className="auth-wrapper">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route path="/sign-in" component={Login} />
-              <Route path="/sign-up" component={SignUp} />
+              <Route path="/login" component={Login} />
+              <Route path="/signup" component={Signup} />
+              <Route path="/userpage/:username?" component={UserPage} />
+              <Route path="/post/:id" component={SinglePost} />
+
+
+              <Route component={WrongRoute} />
             </Switch>
           </div>
         </div>

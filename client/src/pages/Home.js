@@ -16,8 +16,8 @@ const Home = () => {
 
   return (
     <main>
-      <div>
-        <div className="row">
+      <div className="row">
+        <div>
           <div className="col-sm-12 col-md-6 col-lg-4 m-3" id="card">
             {loading ? (
               <div>Loading...</div>
