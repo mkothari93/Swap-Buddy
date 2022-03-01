@@ -6,6 +6,7 @@ export const QUERY_POSTS = gql`
       _id
       postTitle
       postText
+      postImage
       postLocation
       createdAt
       username
@@ -23,6 +24,30 @@ export const QUERY_ME = gql`
         _id
         postTitle
         postText
+        postImage
+        postLocation
+        createdAt
+      }
+      messages {
+        messageTitle
+        messageBody
+        createdAt
+      }
+    }
+  }
+`;
+
+export const QUERY_USER = gql`
+  query getUser($username: String!) {
+    getUser(username: $username) {
+      _id
+      username
+      email
+      posts{
+        _id
+        postTitle
+        postText
+        postImage
         postLocation
         createdAt
       }
@@ -41,6 +66,7 @@ export const QUERY_POST = gql`
       _id
       postTitle
       postText
+      postImage
       postLocation
       createdAt
       username

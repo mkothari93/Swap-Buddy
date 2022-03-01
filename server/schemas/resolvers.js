@@ -27,15 +27,13 @@ const resolvers = {
         return User.findOne({ username })
           .select('-__v -password')
           .populate('posts')
+          .populate('messages')
       },
 
       getAllPosts: async (parent, {username}) => {
         const params = username ? { username } : {};
         return Post.find(params)
           .select('-__v')
-          .populate('postTitle')
-          .populate('username')
-          .populate('postLocation')
           .sort({ createdAt: -1 })
       },
 
