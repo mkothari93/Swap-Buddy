@@ -3,9 +3,9 @@ import PostList from "../components/PostList";
 // import ThoughtForm from '../components/ThoughtForm';
 // import FriendList from '../components/FriendList';
 
-// import Auth from '../utils/auth';
+import Auth from '../utils/auth';
 import { useQuery } from "@apollo/client";
-import { QUERY_POSTS } from "../utils/queries";
+import { QUERY_POSTS,  QUERY_ME_BASIC } from "../utils/queries";
 
 const Home = () => {
   // use useQuery hook to make query request
@@ -13,6 +13,8 @@ const Home = () => {
 
   const posts = data?.getAllPosts || [];
   console.log(posts);
+
+  const loggedIn = Auth.loggedIn();
 
   return (
     <main>
