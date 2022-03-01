@@ -17,7 +17,6 @@ const MessageList = ({ username, messages }) => {
         messages.map((message) => (
           <div key={message._id} className="card mb-3">
             <Card style={{ width: "18rem" }}>
-              <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
               <Card.Body>
                 <Card.Title>{message.messageTitle}</Card.Title>
                 <Card.Text>{message.messageText}</Card.Text>
