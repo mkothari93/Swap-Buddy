@@ -1,7 +1,6 @@
 import React from "react";
 import PostList from "../components/PostList";
-import PostForm from "../components/PostForm";
-
+import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import {
   Nav,
   Navbar,
@@ -9,6 +8,9 @@ import {
   Card,
   ListGroup,
   ListGroupItem,
+  Container,
+  Row,
+  Col,
 } from "react-bootstrap";
 import Auth from "../utils/auth";
 import { useQuery } from "@apollo/client";
@@ -26,22 +28,19 @@ const Home = () => {
   if (loggedIn) {
     return (
       <main>
-        <div className="row">
-          <div className="flex-row justify-space-between">
-            {/* {loggedIn && (
-              <div className="col-12 mb-3">
-                <PostForm />
-              </div>
-            )} */}
-            <div className="col-sm-12 col-md-6 col-lg-4 m-3" id="card">
-              {loading ? (
-                <div>Loading...</div>
-              ) : (
-                <PostList posts={posts} title="Items for trade..." />
-              )}
+        {/* <div className="container d-flex">
+        <div className="row"> */}
+        {/* <div className="col-sm-12 col-md-6 col-lg-4 m-3 d-flex flex-row" id="card"> */}
+
+        {loading ? (
+          <div>Loading...</div>
+        ) : (
+          <div className="row">
+            <div className="col-md-5">
+              <PostList posts={posts} />
             </div>
           </div>
-        </div>
+        )}
       </main>
     );
   } else

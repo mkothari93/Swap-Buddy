@@ -62,7 +62,7 @@ const Header = () => {
           </nav>
         </div>
       </nav>
-      {/* <nav id="categorynav">
+      {/* <nav id="categorynav" className="pt-4">
         <Navbar collapseOnSelect expand="xxxl" className="nav-search">
           <Navbar.Toggle
             aria-controls="basic-navbar-nav"
