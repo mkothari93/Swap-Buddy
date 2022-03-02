@@ -134,3 +134,7 @@
     display: flex;
     align-items: center;
   }
+
+  .form-control {
+    margin: 0.2rem;
+  }
