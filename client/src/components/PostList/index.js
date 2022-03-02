@@ -24,7 +24,7 @@ const PostList = ({ posts }) => {
         posts.map((post) => (
           // <Container>
           //   <Row>
-              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3" key={post._id}>
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-2 m-3" key={post._id}>
                 <Card id="card">
                   <Card.Img
                     variant="top"
