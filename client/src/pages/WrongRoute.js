@@ -2,7 +2,7 @@ import React from 'react';
 
 const WrongRoute = () => {
   return (
-    <div>
+    <div style={{ color: "white" }}>
       Oops, we couldn't find that page.
     </div>
   );

@@ -14,7 +14,7 @@ const SinglePost = (props) => {
   const post = data?.getPost || {};
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div style={{ color: "white" }}>Loading...</div>;
   }
 
   return (

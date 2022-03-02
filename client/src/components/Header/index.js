@@ -19,7 +19,7 @@ const Header = () => {
   return (
     // <div className="App">
     <div>
-      <nav className="navbar navbar-expand-lg navbar-light">
+      <nav className="navbar navbar-expand-lg" style={{background: "#FADE82"}}>
         <div className="container">
           <Link className="navbar-brand" to="/">
             Swap Buddy
