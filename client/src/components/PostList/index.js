@@ -19,7 +19,7 @@ const PostList = ({ posts }) => {
   }
 
   return (
-    <main className="d-flex flex-wrap justify-content-around">
+    <main className="d-flex flex-wrap justify-content-around m-auto" style= {{ width: '100%'}}>
       {posts &&
         posts.map((post) => (
           // <Container>

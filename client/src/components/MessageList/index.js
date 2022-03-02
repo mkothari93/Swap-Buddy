@@ -7,7 +7,7 @@ import {
 
 const MessageList = ({ username, messages }) => {
   if (!messages || !messages.length) {
-    return <h3>No Messages In Your Inbox</h3>;
+    return <h3 style={{ color: "white" }}>No Messages In Your Inbox</h3>;
   }
 
   return (

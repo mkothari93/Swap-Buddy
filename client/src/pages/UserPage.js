@@ -26,25 +26,22 @@ const UserPage = () => {
   }
 
   return (
-    <div>
+    <main>
       <div>
-        <h2>Viewing {user.username}'s Home Page.</h2>
+        <h2 style={{ color: "white" }}>Viewing {user.username}'s Home Page.</h2>
       </div>
 
-      <div>
-        <div className="col-12 mb-3 col-lg-8">
-          <PostList posts={user.posts} title={`${user.username}'s Posts: `} />
+        <div className="mb-3" >
+          <PostList className="d-flex flex-wrap" posts={user.posts} title={`${user.username}'s Posts: `} />
         </div>
-
         <div className="col-12 col-lg-3 mb-3">
           <MessageList
             username={user.username}
             messages={user.messages}
           />
         </div>
-      </div>
       <div className="mb-3">{!userParam && <PostForm />}</div>
-    </div>
+  </main>
   );
 };
 
