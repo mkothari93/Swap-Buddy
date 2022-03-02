@@ -1,6 +1,6 @@
 import React from "react";
 import PostList from "../components/PostList";
-import "../../node_modules/bootstrap/dist/css/bootstrap.min.css";
+import "bootstrap/dist/css/bootstrap.min.css";
 import {
   Nav,
   Navbar,
@@ -27,7 +27,8 @@ const Home = () => {
 
   if (loggedIn) {
     return (
-      <main>
+      <div className="container">
+      <div className="row justify-content-center">
         {/* <div className="container d-flex">
         <div className="row"> */}
         {/* <div className="col-sm-12 col-md-6 col-lg-4 m-3 d-flex flex-row" id="card"> */}
@@ -35,13 +36,10 @@ const Home = () => {
         {loading ? (
           <div style={{ color: "white" }}>Loading...</div>
         ) : (
-          <div className="row">
-            <div className="col-md-5">
               <PostList posts={posts} />
-            </div>
-          </div>
         )}
-      </main>
+        </div>
+        </div>
     );
   } else
     return (

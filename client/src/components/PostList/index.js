@@ -19,13 +19,13 @@ const PostList = ({ posts }) => {
   }
 
   return (
-    <div>
+    <main className="d-flex flex-wrap justify-content-around">
       {posts &&
         posts.map((post) => (
           // <Container>
           //   <Row>
-              <div className="box" key={post._id}>
-                <Card className="m-3" id="card">
+              <div className="col-xs-12 col-sm-6 col-md-4 col-lg-3 m-3" key={post._id}>
+                <Card id="card">
                   <Card.Img
                     variant="top"
                     src="holder.js/100px180?text=Image cap"
@@ -48,10 +48,10 @@ const PostList = ({ posts }) => {
                   </Card.Body>
                 </Card>
               </div>
-          //   </Row>
+          //     </Row>
           // </Container>
         ))}
-    </div>
+              </main>
   );
 };
 

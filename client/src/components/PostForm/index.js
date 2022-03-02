@@ -63,32 +63,41 @@ const PostForm = () => {
 
   return (
     <div>
-      <form
-        className="flex-row justify-center justify-space-between-md align-stretch"
-        onSubmit={handleFormSubmit}
-      >
-        <textarea
-          placeholder="Trade Title"
-          value={postTitle}
-          onChange={handleTitleChange}
-          className="form-input col-12 col-md-9"
-        ></textarea>
-        <textarea
-          placeholder="Trade Description"
-          value={postText}
-          className="form-input col-12 col-md-9"
-          onChange={handleTextChange}
-        ></textarea>
-        <textarea
-          placeholder="Location"
-          value={postLocation}
-          className="form-input col-12 col-md-9"
-          onChange={handleLocationChange}
-        ></textarea>
-        <button className="btn col-12 col-md-3" type="submit">
-          Submit
-        </button>
-      </form>
+      <h2 style={{ color: "white" }} className="text-center mt-5">
+        Create A Post
+      </h2>
+      <div className="create-post">
+        <div className="form-group">
+          <form
+            className="flex-row justify-center justify-space-between-md align-stretch"
+            onSubmit={handleFormSubmit}
+          >
+            <textarea
+              placeholder="Trade Title"
+              value={postTitle}
+              onChange={handleTitleChange}
+              className="form-control"
+            ></textarea>
+            <textarea
+              placeholder="Trade Description"
+              value={postText}
+              className="form-control"
+              onChange={handleTextChange}
+            ></textarea>
+            <textarea
+              placeholder="Location"
+              value={postLocation}
+              className="form-control"
+              onChange={handleLocationChange}
+            ></textarea>
+            <div className="d-flex justify-content-center mt-2">
+              <button className="btn btn-primary btn-block" type="submit">
+                Submit
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
     </div>
   );
 };
