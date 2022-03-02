@@ -33,7 +33,7 @@ const Home = () => {
         {/* <div className="col-sm-12 col-md-6 col-lg-4 m-3 d-flex flex-row" id="card"> */}
 
         {loading ? (
-          <div>Loading...</div>
+          <div style={{ color: "white" }}>Loading...</div>
         ) : (
           <div className="row">
             <div className="col-md-5">
