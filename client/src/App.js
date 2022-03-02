@@ -52,7 +52,7 @@ function App() {
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/userpage/:username?" component={UserPage} />
             <Route exact path="/post/:id" component={SinglePost} />
-            {/* <Route exact path="/createpost" component={CreatePost} /> */}
+            <Route exact path="/createpost" component={CreatePost} />
 
             <Route component={WrongRoute} />
           </Switch>
