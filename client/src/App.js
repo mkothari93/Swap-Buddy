@@ -2,14 +2,6 @@ import React from "react";
 import "./App.css";
 import "./Home.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
-import {
-  Nav,
-  Navbar,
-  NavDropdown,
-  Card,
-  ListGroup,
-  ListGroupItem,
-} from "react-bootstrap";
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import {
   ApolloProvider,
@@ -27,6 +19,7 @@ import Login from "./pages/Login";
 import Signup from "./pages/Signup";
 import UserPage from "./pages/UserPage";
 import SinglePost from "./pages/SinglePost";
+import CreatePost from "./pages/CreatePost";
 
 const httpLink = createHttpLink({
   uri: "http://localhost:3001/graphql",
@@ -52,17 +45,18 @@ function App() {
     <ApolloProvider client={client}>
       <Router>
         <Header />
-        <div className="auth-wrapper">
+        {/* <div className="auth-wrapper"> */}
           <Switch>
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/signup" component={Signup} />
             <Route exact path="/userpage/:username?" component={UserPage} />
             <Route exact path="/post/:id" component={SinglePost} />
+            {/* <Route exact path="/createpost" component={CreatePost} /> */}
 
             <Route component={WrongRoute} />
           </Switch>
-        </div>
+        {/* </div> */}
       </Router>
     </ApolloProvider>
   );

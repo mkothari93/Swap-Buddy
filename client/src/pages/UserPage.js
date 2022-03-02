@@ -1,10 +1,12 @@
 import React from "react";
 import PostList from "../components/PostList";
 import MessageList from "../components/MessageList";
+import PostForm from "../components/PostForm";
 import { Redirect, useParams } from "react-router-dom";
 import { useQuery } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../utils/queries";
 import Auth from '../utils/auth';
+
 
 const UserPage = () => {
   const { username: userParam } = useParams();
@@ -41,6 +43,7 @@ const UserPage = () => {
           />
         </div>
       </div>
+      <div className="mb-3">{!userParam && <PostForm />}</div>
     </div>
   );
 };
