@@ -22,7 +22,7 @@ import SinglePost from "./pages/SinglePost";
 import CreatePost from "./pages/CreatePost";
 
 const httpLink = createHttpLink({
-  uri: "http://localhost:3001/graphql",
+  uri: "/graphql",
 });
 
 const authLink = setContext((_, { headers }) => {

@@ -28,41 +28,34 @@ const Home = () => {
   if (loggedIn) {
     return (
       <div className="container">
-      <div className="row justify-content-center">
-        {/* <div className="container d-flex">
-        <div className="row"> */}
-        {/* <div className="col-sm-12 col-md-6 col-lg-4 m-3 d-flex flex-row" id="card"> */}
-
-        {loading ? (
-          <div style={{ color: "white" }}>Loading...</div>
-        ) : (
-              <PostList posts={posts} />
-        )}
+        <div className="row justify-content-center">
+          {loading ? (
+            <div style={{ color: "white" }}>Loading...</div>
+          ) : (
+            <PostList posts={posts} />
+          )}
         </div>
-        </div>
+      </div>
     );
   } else
     return (
-      //PreMade Cards if user is not logged in
-      <Card style={{ width: "18rem" }}>
-        <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
-        <Card.Body>
-          <Card.Title>Camera</Card.Title>
-          <Card.Text>In new condition</Card.Text>
-        </Card.Body>
-        <ListGroup className="list-group-flush">
-          <ListGroupItem>posted by Monika</ListGroupItem>
-          <ListGroupItem>IL</ListGroupItem>
-        </ListGroup>
-        {/* <Card.Body>
-          <Card.Link>
-            <Link to={`/post/${post._id}`}>
-                View Details
-            </Link>
-          </Card.Link>
-          <Card.Link href="#">Contact {post.username}</Card.Link>
-          </Card.Body> */}
-      </Card>
+      <main className="d-flex flex-wrap justify-content-around m-3">
+        <div className="col-xs-12 col-sm-8 col-md-5 col-lg-3 m-3">
+          <Card id="card">
+            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Body>
+              <Card.Title>Camera</Card.Title>
+              <Card.Text>In mint condition</Card.Text>
+            </Card.Body>
+            <ListGroup className="list-group-flush">
+              <ListGroupItem>
+                Posted on March 2, 2022 at 10:00am
+              </ListGroupItem>
+              <ListGroupItem>Chicago, IL</ListGroupItem>
+            </ListGroup>
+          </Card>
+        </div>
+      </main>
     );
 };
 

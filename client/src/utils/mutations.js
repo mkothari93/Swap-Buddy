@@ -36,4 +36,13 @@ mutation createPost($postTitle: String!, $postText: String!, $postLocation: Stri
     username
   }
 }
-`
+`;
+
+export const DELETE_POST = gql `
+mutation deletePost($id: String!) {
+  deletePost(_id: $id) {
+    _id
+    postTitle
+  }
+}
+`;
