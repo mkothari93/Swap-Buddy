@@ -19,51 +19,43 @@ const Header = () => {
   return (
     // <div className="App">
     <div>
-      <nav className="navbar navbar-expand-lg" style={{background: "#FADE82"}}>
+      <nav
+        className="navbar navbar-expand-lg"
+        style={{ background: "#FADE82" }}
+      >
         <div className="container">
-          <Link className="navbar-brand" style={{background: "#FADE82", fontSize: "50px"}} to="/">
+          <Link
+            className="navbar-brand"
+            style={{ background: "#FADE82", fontSize: "50px" }}
+            to="/"
+          >
             Swap Buddy
           </Link>
 
-          {/* <div className="collapse navbar-collapse" id="navbarTogglerDemo02">
-            <ul className="navbar-nav ml-auto">
-              <li className="nav-item">
-                <Link className="nav-link" to={"/login"}>
-                  Login
-                </Link>
-              </li>
-              <li className="nav-item">
-                <Link className="nav-link" to={"/signup"}>
-                  Sign up
-                </Link>
-              </li>
-            </ul>
-          </div> */}
-
           <nav className="text-center">
             {Auth.loggedIn() ? (
-              <>
-                <p>
+              <div className="d-flex flex-wrap">
+                <div className="m-4" style={{fontSize:"18px"}}>
                   <Link to="/userpage">My Account</Link>
-                </p>
-                <p>
+                </div>
+                <div className="m-4" style={{fontSize:"18px"}}>
+                  <Link to="/createpost">Create A Post</Link>
+                </div>{" "}
+                <div className="m-4" style={{fontSize:"18px"}}>
                   <a href="/" onClick={logout}>
                     Logout
                   </a>
-                </p>
-                <p>
-                  <Link to="/createpost">Create A Post</Link>
-                </p>
-              </>
+                </div>
+              </div>
             ) : (
-              <>
-                <p>
+              <div className="d-flex flex-wrap">
+                <div className="m-4" style={{fontSize:"18px"}}>
                   <Link to="/login">Login</Link>
-                </p>
-                <p>
+                </div>
+                <div className="m-4" style={{fontSize:"18px"}}>
                   <Link to="/signup">Signup</Link>
-                </p>
-              </>
+                </div>
+              </div>
             )}
           </nav>
         </div>
