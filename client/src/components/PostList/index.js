@@ -27,7 +27,7 @@ const PostList = ({ posts }) => {
             key={post._id}
           >
             <Card id="card">
-              <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+              {/* <Card.Img variant="top" src="holder.js/100px180?text=Image cap" /> */}
               <Card.Body>
                 <Card.Title>{post.postTitle}</Card.Title>
                 <Card.Text>{post.postText}</Card.Text>

@@ -19,15 +19,35 @@ const SinglePost = (props) => {
 
   return (
     <div>
-      <div className="card mb-3">
-        <p className="card-header">{post.postTitle}</p>
+      <div
+        className="card m-5"
+        style={{
+          border: "2px solid black",
+          borderRadius: "25px",
+        }}
+      >
+        <p
+          className="card-header text-center"
+          style={{
+            fontWeight: 700,
+            fontSize: "40px",
+            borderBottom: "1px solid black",
+          }}
+        >
+          {post.postTitle}
+        </p>
         <div className="card-body">
-          <p>{post.postText}</p>
-          <span style={{ fontWeight: 700 }} className="text-dark">
-            {post.username}
-          </span>{" "}
-          posted on {post.createdAt}
-          <p>{post.postLocation}</p>
+          <div style={{ borderBottom: "1px solid black" }}>
+            <p style={{ fontSize: "20px" }}>{post.postText}</p>
+          </div>
+          <br></br>
+          <p className="text-center">
+            <span style={{ fontWeight: 700 }} className="text-dark text-center">
+              {post.username}
+            </span>{" "}
+            posted on {post.createdAt}
+          </p>
+          <p className="text-center">{post.postLocation}</p>
         </div>
       </div>
     </div>

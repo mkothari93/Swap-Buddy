@@ -40,7 +40,7 @@ const Login = (props) => {
   };
 
   return (
-    <main className="flex-row justify-center mb-4">
+    <main className="flex-row justify-center mt-4">
       <div>
         <div className="auth-inner">
           <h4 className='text-center'>Login</h4>

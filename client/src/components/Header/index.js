@@ -21,7 +21,7 @@ const Header = () => {
     <div>
       <nav className="navbar navbar-expand-lg" style={{background: "#FADE82"}}>
         <div className="container">
-          <Link className="navbar-brand" to="/">
+          <Link className="navbar-brand" style={{background: "#FADE82", fontSize: "50px"}} to="/">
             Swap Buddy
           </Link>
 
