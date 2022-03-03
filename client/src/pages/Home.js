@@ -42,7 +42,7 @@ const Home = () => {
       <main className="d-flex flex-wrap justify-content-around m-3">
         <div className="col-xs-12 col-sm-8 col-md-5 col-lg-3 m-3">
           <Card id="card">
-            <Card.Img variant="top" src="holder.js/100px180?text=Image cap" />
+            <Card.Img variant="top" src="client/src/Images/Camera.jpeg" />
             <Card.Body>
               <Card.Title>Camera</Card.Title>
               <Card.Text>In mint condition</Card.Text>
