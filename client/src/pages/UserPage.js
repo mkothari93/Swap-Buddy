@@ -27,7 +27,7 @@ const UserPage = () => {
   return (
     <main>
       <div>
-        <h2 style={{ color: "white" }} className="text-center mt-5">Viewing {user.username}'s Home Page.</h2>
+        <h2 style={{ color: "white" }} className="text-center mt-5">Welcome {user.username}!</h2>
       </div>
 
       <div className="mb-3">

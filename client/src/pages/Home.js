@@ -40,7 +40,7 @@ const Home = () => {
   } else
     return (
       <main>
-        <h1 style={{ color: "white" }} className="text-center mt-5">Got stuff?? Trade it!</h1>
+        <h1 style={{ color: "white" }} className="text-center mt-5">Got stuff?? Swap it!</h1>
         <h3 style={{ color: "white" }} className="text-center m-4">Swap Buddy is here to help you trade your items with other users in your area.</h3>
         <h4 style={{ color: "white" }} className="text-center mb-3">Start swapping today by logging in..</h4>
         <div className="d-flex flex-wrap justify-content-around m-3">
