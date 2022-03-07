@@ -5,7 +5,6 @@ import { Redirect, useParams } from "react-router-dom";
 import { useQuery, useMutation } from "@apollo/client";
 import { QUERY_USER, QUERY_ME } from "../../utils/queries";
 import { DELETE_POST } from "../../utils/mutations";
-import Auth from "../../utils/auth";
 
 const UserPostList = ({ posts, postId }) => {
   const { username: userParam } = useParams();
@@ -16,24 +15,24 @@ const UserPostList = ({ posts, postId }) => {
 
   const user = data?.getUser || data?.me || {};
 
-  if (Auth.loggedIn() && Auth.getProfile().data.username === userParam) {
-    return <Redirect to="/userpage" />;
-  }
-
   const handleDeletePost = async (id) => {
     try {
       await deletePost({
-        variables: {id}
-      })
-      console.log(id);
+        variables: { id },
+        refetchQueries: [{ query: QUERY_ME }]
+      });
+      <Redirect to="/userpage" />
     } catch (error) {
-      console.error(error)
+      console.error(error);
     }
-    window.location.reload()
   };
 
   if (!posts.length) {
-    return <h3 style={{ color: "white" }} className="text-center m-5">No Posts Yet...</h3>;
+    return (
+      <h3 style={{ color: "white" }} className="text-center m-5">
+        No Posts Yet...
+      </h3>
+    );
   }
 
   return (
@@ -55,7 +54,10 @@ const UserPostList = ({ posts, postId }) => {
                 <ListGroupItem>{post.postLocation}</ListGroupItem>
               </ListGroup>
               <Card.Body>
-                <Button className="btn btn-primary btn-block" onClick={() => handleDeletePost(post._id)}>
+                <Button
+                  className="btn btn-primary btn-block"
+                  onClick={() => handleDeletePost(post._id)}
+                >
                   Delete Post
                 </Button>
               </Card.Body>
